@@ -6,6 +6,7 @@ import {
   DragSensor,
   MouseSensor,
   TouchSensor,
+  KeyboardSensor,
 } from './Sensors';
 
 import {
@@ -30,6 +31,11 @@ import {
   MirrorMoveEvent,
   MirrorDestroyEvent,
 } from './MirrorEvent';
+
+const defaultAnnouncements = {
+  'drag:start': 'Picked up draggable',
+  'drag:stop': 'Dropped draggable',
+};
 
 const defaults = {
   draggable: '.draggable-source',
@@ -172,6 +178,7 @@ export default class Draggable {
   sensors() {
     return [
       TouchSensor,
+      KeyboardSensor,
       (this.options.native ? DragSensor : MouseSensor),
     ];
   }
@@ -198,7 +205,7 @@ export default class Draggable {
 
     this.source = this.originalSource.cloneNode(true);
 
-    if (!isDragEvent(originalEvent)) {
+    if (!isDragEvent(originalEvent) && !isKeyboardEvent(originalEvent)) {
       const appendableContainer = this.getAppendableContainer({source: this.originalSource});
       this.mirror = this.source.cloneNode(true);
 
@@ -497,6 +504,10 @@ function getSensorEvent(event) {
 
 function isDragEvent(event) {
   return /^drag/.test(event.type);
+}
+
+function isKeyboardEvent(event) {
+  return /^key/.test(event.type);
 }
 
 function applyUserSelect(element, value) {
