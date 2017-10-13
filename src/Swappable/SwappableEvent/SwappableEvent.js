@@ -8,10 +8,12 @@ export class SwappableEvent extends AbstractEvent {
 
 export class SwappableStartEvent extends SwappableEvent {
   static type = 'swappable:start';
+  static cancelable = true;
 }
 
 export class SwappableSwapEvent extends SwappableEvent {
   static type = 'swappable:swap';
+  static cancelable = true;
 
   get over() {
     return this.data.over;
