@@ -1,0 +1,72 @@
+////
+/// Components
+/// Page
+////
+
+html {
+  font-family: font-stack();
+  background-color: color(purple);
+  background-image: linear-gradient(188deg,
+    color(purple),
+    color(blue),
+    color(brand, yellow),
+    color(red),
+    color(purple),
+    color(blue, light),
+    color(aqua),
+    color(yellow),
+    color(red)
+  );
+
+  ::selection {
+    color: color(ash, light);
+    background-color: color(coal, darker);
+  }
+}
+
+body {
+  cursor: path-to-asset(image, 'cursor-auto.png'), auto;
+
+  @media screen and (min-width: breakpoint(tablet)) {
+    padding: spacing(tighter);
+  }
+}
+
+main {
+  @media screen and (min-width: breakpoint(tablet)) {
+    border: border(section, tablet);
+  }
+}
+
+///
+/// Cursor styles
+p,
+li,
+dd,
+.Heading {
+  cursor: path-to-asset(image, 'cursor-text.png'), text;
+}
+
+a,
+button {
+  cursor: path-to-asset(image, 'cursor-pointer.png'), pointer;
+
+  &:active {
+    cursor: path-to-asset(image, 'cursor-pointer-clicked.png'), pointer;
+  }
+}
+
+// Set `state` cursors to never used tags only so they can be fetched on page load,
+// rather than the instance they are first requested...
+// both tags are used within a `visuallyhidden` footer credits to the creators
+b {
+  cursor: path-to-asset(image, 'cursor-grab.png'), auto;
+}
+
+i {
+  cursor: path-to-asset(image, 'cursor-pointer-clicked.png'), auto;
+}
+
+u {
+  cursor: path-to-asset(image, 'cursor-rockon-clicked.png'), auto;
+}

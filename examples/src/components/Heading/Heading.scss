@@ -1,0 +1,39 @@
+////
+/// Components
+/// Heading
+////
+
+.Heading,
+.Subheading  {
+  line-height: 1.3;
+}
+
+///
+/// Standard variations
+.Heading--size1 {
+  margin-bottom: spacing(tight);
+  font-size: type-scale(h1);
+  font-weight: 700;
+
+  @media screen and (min-width: breakpoint(tablet)) {
+    margin-bottom: spacing();
+    font-size: type-scale(h1, tablet);
+  }
+
+  @media screen and (min-width: breakpoint(tablet, wide)) {
+    margin-bottom: spacing(looser);
+  }
+}
+
+///
+/// Subheading
+.Subheading {
+  margin-bottom: spacing(loose);
+  font-size: type-scale(subheading);
+  color: white;
+}
+
+.Subheading--typeMono {
+  font-family: font-stack(monospace);
+  text-transform: uppercase;
+}

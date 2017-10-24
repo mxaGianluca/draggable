@@ -1,0 +1,17 @@
+////
+/// Themes
+/// Merge Draggable theme into Threads
+////
+
+@include threads-update-property('border', $draggable-border-data);
+@include threads-update-property('breakpoint', $draggable-breakpoint-data);
+@include threads-update-property('color', $draggable-color-data);
+@include threads-update-property('layout-width', $draggable-layout-width-data);
+@include threads-update-property('duration', $draggable-duration-data);
+@include threads-update-property('easing', $draggable-easing-data);
+@include threads-update-property('font-stack', $draggable-font-stack-data);
+@include threads-update-property('type-scale', $draggable-type-scale-data);
+@include threads-update-property('radius', $draggable-radius-data);
+@include threads-update-property('shadow', $draggable-shadow-data);
+@include threads-update-property('spacing', $draggable-spacing-data);
+@include threads-update-property('z-index', $draggable-z-index-data);

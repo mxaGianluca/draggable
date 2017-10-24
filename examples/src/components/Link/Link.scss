@@ -1,0 +1,25 @@
+////
+/// Components
+/// Link
+////
+
+@mixin Link {
+  color: black;
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-skip: ink;
+  transition: color duration() easing();
+
+  &:focus,
+  &:hover {
+    color: color(yellow, light);
+  }
+
+  &:active {
+    color: color(yellow);
+  }
+}
+
+.Link {
+  @include Link;
+}

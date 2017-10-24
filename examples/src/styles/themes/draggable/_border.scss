@@ -1,0 +1,15 @@
+////
+/// Draggable Theme
+/// Border
+////
+
+$border-section-width: 0.6rem;
+$border-section-width-tablet: 1rem;
+
+$draggable-border-data: (
+  base: 0.3rem solid currentColor,
+  section: (
+    base: $border-section-width solid black,
+    tablet: $border-section-width-tablet solid black,
+  ),
+);

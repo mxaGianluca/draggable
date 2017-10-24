@@ -1,0 +1,42 @@
+////
+/// Components
+/// Section
+////
+
+$section-padding-x-mobile: 1.3rem; // (320px - 294px) / 2
+
+.Section {
+  // using custom spacing rather than `spacing(tighter)`
+  // to be equal to the mobile width of a puzzle
+  padding-left: $section-padding-x-mobile;
+  padding-right: $section-padding-x-mobile;
+
+  @media screen and (min-width: breakpoint(tablet)) {
+    padding-left: spacing();
+    padding-right: spacing();
+  }
+
+  & + & {
+    border-top: border(section);
+
+    @media screen and (min-width: breakpoint(tablet)) {
+      border-top: border(section, tablet);
+    }
+  }
+}
+
+///
+/// Section interior
+.SectionInterior--hasMargin {
+  margin-bottom: spacing(fatter);
+
+  @media screen and (min-width: breakpoint(tablet)) {
+    margin-bottom: spacing(huger);
+  }
+
+  @media screen and (min-width: breakpoint(tablet, wide)) {
+    margin-bottom: spacing(hugest);
+  }
+}
+
+// Section--isLoading is handled in `states.scss`
