@@ -190,7 +190,6 @@
 ///
 /// Functions
 
-/*
 // Column based max-width layout
 @function columns($count: 1) {
   @if type-of($count) != number or $count < 1 {
@@ -202,7 +201,6 @@
 
   @return $column-width + $gutter-width;
 }
-*/
 
 ///
 /// Layout classes
