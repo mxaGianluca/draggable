@@ -2,6 +2,10 @@
   "name": "draggable-examples",
   "version": "1.0.0",
   "description": "Examples for draggable.js",
+  "author": "Max Hoffmann and Curtis Dulmage",
+  "homepage": "https://shopify.github.io/draggable",
+  "license": "MIT",
+  "main": "tools/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Shopify/draggable.git"
@@ -10,13 +14,9 @@
     "draggable",
     "javascript"
   ],
-  "author": "Curtis Dulmage",
   "bugs": {
     "url": "https://github.com/Shopify/draggable/issues"
   },
-  "homepage": "https://shopify.github.io/draggable",
-  "license": "MIT",
-  "main": "tools/index.js",
   "config": {
     "tools": "--require babel-register --gulpfile tools"
   },
@@ -31,10 +31,10 @@
   },
   "dependencies": {
     "core-js": "^2.5.1",
-    "threads": "git+ssh://git@github.com/Shopify/threads.git#v1.0.0-beta2"
+    "threads": "git+ssh://git@github.com/beefchimi/threads.git#v1.0.0-beta2"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.5",
+    "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-shopify": "^16.2.0",

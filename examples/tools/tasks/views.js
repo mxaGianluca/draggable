@@ -15,6 +15,7 @@ export function views() {
       env: nunjucksEnv,
     }))
     .pipe(htmlmin({
+      minifyJS: true,
       removeComments: true,
       collapseWhitespace: true,
     }))
