@@ -10,6 +10,7 @@ $wordmark-width: 16.2rem;
 
 .Brand {
   cursor: get-cursor(rock);
+  display: flex;
 
   &:active {
     cursor: get-cursor(rock, active);
@@ -17,7 +18,12 @@ $wordmark-width: 16.2rem;
 }
 
 .BrandLogo {
-  width: $logo-width;
+  flex: 0 0 $logo-width;
+}
+
+.BrandWordmark {
+  flex: 0 0 $wordmark-width;
+  margin-left: get-spacing(tighter);
 }
 
 .Svg--srcWordmark {

@@ -1,0 +1,44 @@
+////
+/// Components
+/// Navigation
+////
+
+.Navigation {
+  padding: get-spacing(tight);
+}
+
+.NavList {
+  & + & {
+    margin-top: get-spacing();
+  }
+}
+
+.NavItem {
+  & + & {
+    margin-top: get-spacing(tightest);
+  }
+}
+
+.NavHeading,
+.NavLink {
+  letter-spacing: -0.1rem;
+  line-height: 0.9;
+}
+
+.NavHeading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+// Use .Link class?
+.NavLink {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: get-color(ash, dark);
+  transition: color get-duration() get-easing();
+
+  &:hover {
+    color: get-color(purple);
+  }
+}

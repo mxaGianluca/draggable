@@ -20,11 +20,20 @@
 @import 'utilities/utilities';
 
 ///
-/// Base Components
+/// Base components
 @import '../components/Page/Page';
 // @import '../components/Section/Section';
 @import '../components/Svg/Svg';
-// @import '../components/Link/Link';
+@import '../components/Link/Link';
 // @import '../components/Heading/Heading';
 // @import '../components/Content/Content';
+
+///
+/// Sidebar components
+@import '../components/Sidebar/Sidebar';
+@import '../components/Navigation/Navigation';
+@import '../components/Hamburger/Hamburger';
 @import '../components/Brand/Brand';
+
+///
+/// Example components

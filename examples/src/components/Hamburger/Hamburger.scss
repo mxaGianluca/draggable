@@ -9,10 +9,10 @@
 .Hamburger {
   z-index: get-z-index(hamburger);
   position: absolute;
-  top: 0;
+  top: get-spacing();
   left: 50%;
-
-  // padding: $page-nav-activator-padding;
+  margin-left: -$hamburger-offset;
+  padding: get-spacing(tightest);
   // opacity: 0;
   // animation: FadeActivator get-duration(slow) get-easing() forwards;
 
@@ -64,27 +64,27 @@
 
 .HamburgerPatty {
   top: $hamburger-vertical-center;
-  animation-name: HamburgerMiddle-Out;
+  animation-name: HamburgerPatty-Out;
 }
 
 ///
 /// Hamburger expanded state
 
 .Hamburger--isExpanded {
-  .Hamburger::before,
-  .Hamburger::after {
+  .HamburgerBun::before,
+  .HamburgerBun::after {
     background-color: white;
   }
 
-  .Hamburger::before {
+  .HamburgerBun::before {
     animation-name: HamburgerBefore-In;
   }
 
-  .Hamburger::after {
+  .HamburgerBun::after {
     animation-name: HamburgerAfter-In;
   }
 
   .HamburgerPatty {
-    animation-name: HamburgerMiddle-In;
+    animation-name: HamburgerPatty-In;
   }
 }
