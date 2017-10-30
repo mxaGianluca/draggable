@@ -4,15 +4,15 @@
 ////
 
 @mixin ContentParagraph {
-  font-size: type-scale(paragraph);
+  font-size: get-type-scale(paragraph);
   font-weight: 700;
   line-height: 1.6;
 
-  @media screen and (min-width: breakpoint(tablet)) {
-    font-size: type-scale(paragraph, tablet);
+  @media screen and (min-width: get-breakpoint(tablet)) {
+    font-size: get-type-scale(paragraph, tablet);
   }
 
-  @media screen and (min-width: breakpoint(tablet, wide)) {
-    font-size: type-scale(paragraph, tablet-wide);
+  @media screen and (min-width: get-breakpoint(tablet, wide)) {
+    font-size: get-type-scale(paragraph, tablet-wide);
   }
 }

@@ -8,15 +8,15 @@
   text-decoration: underline;
   text-decoration-line: underline;
   text-decoration-skip: ink;
-  transition: color duration() easing();
+  transition: color get-duration() get-easing();
 
   &:focus,
   &:hover {
-    color: color(yellow, light);
+    color: get-color(yellow, light);
   }
 
   &:active {
-    color: color(yellow);
+    color: get-color(yellow);
   }
 }
 

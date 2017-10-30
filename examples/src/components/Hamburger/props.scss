@@ -1,0 +1,10 @@
+////
+/// Components
+/// Hamburger props
+////
+
+$hamburger-width: 2.4rem;
+$hamburger-height: 2rem;
+$hamburger-line-height: 0.2rem;
+$hamburger-after-y: $hamburger-height - $hamburger-line-height;
+$hamburger-vertical-center: ($hamburger-height / 2) - ($hamburger-line-height / 2);

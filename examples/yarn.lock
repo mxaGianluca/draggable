@@ -6631,9 +6631,9 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
-"threads@git+ssh://git@github.com/beefchimi/threads.git#v1.0.0-beta2":
+"threads@git+ssh://git@github.com/beefchimi/threads.git#v1.0.0-beta5":
   version "0.0.0"
-  resolved "git+ssh://git@github.com/beefchimi/threads.git#e43fdb0bc998d4617bf73262644bdad4f3234c7b"
+  resolved "git+ssh://git@github.com/beefchimi/threads.git#5e532d138de569057f73e62faf3585429b8049d0"
 
 through2-filter@^2.0.0:
   version "2.0.0"

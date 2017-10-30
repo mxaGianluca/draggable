@@ -8,4 +8,6 @@ export const views = tasks.views;
 export const server = tasks.startServer;
 export const start = watch;
 
-export const build = gulp.parallel(scripts, styles, views);
+const root = tasks.root;
+
+export const build = gulp.parallel(scripts, styles, views, root);

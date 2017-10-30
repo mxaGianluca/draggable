@@ -27,7 +27,7 @@
 // @param {String} $spacing-variant - The key for the desired spacing variant.
 @mixin vertical-rhythm($spacing-variant: base) {
   > * + * {
-    margin-top: spacing($spacing-variant);
+    margin-top: get-spacing($spacing-variant);
   }
 }
 
@@ -196,8 +196,8 @@
     @error 'You did not provide a proper column count.';
   }
 
-  $column-width: $count * layout-width(column);
-  $gutter-width: ($count - 1) * layout-width(gutter);
+  $column-width: $count * get-layout-width(column);
+  $gutter-width: ($count - 1) * get-layout-width(gutter);
 
   @return $column-width + $gutter-width;
 }

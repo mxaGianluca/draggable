@@ -6,16 +6,16 @@
 @import './mixins';
 
 .Content {
-  @include centered-width(layout-width(content));
-  margin-bottom: spacing(loose);
+  @include centered-width(get-layout-width(content));
+  margin-bottom: get-spacing(loose);
   text-align: center;
 
-  @media screen and (min-width: breakpoint(tablet)) {
-    margin-bottom: spacing(fat);
+  @media screen and (min-width: get-breakpoint(tablet)) {
+    margin-bottom: get-spacing(fat);
   }
 
-  @media screen and (min-width: breakpoint(tablet, wide)) {
-    margin-bottom: spacing(fattest);
+  @media screen and (min-width: get-breakpoint(tablet, wide)) {
+    margin-bottom: get-spacing(fattest);
   }
 
   // --- Typographic elements
@@ -25,5 +25,5 @@
 }
 
 .Content--sizeSmall {
-  max-width: layout-width();
+  max-width: get-layout-width();
 }

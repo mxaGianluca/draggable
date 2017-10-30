@@ -1,0 +1,80 @@
+////
+/// Components
+/// Brand
+////
+
+@import './keyframes';
+
+$logo-width: 4.6rem;
+$wordmark-width: 16.2rem;
+
+.Brand {
+  cursor: get-cursor(rock);
+
+  &:active {
+    cursor: get-cursor(rock, active);
+  }
+}
+
+.BrandLogo {
+  width: $logo-width;
+}
+
+.Svg--srcWordmark {
+  fill: get-color(brand, yellow);
+}
+
+///
+/// Logo
+.Wave--colorMask {
+  fill: get-color(coal, dark);
+}
+
+.Wave--colorPurple {
+  fill: get-color(brand, purple);
+}
+
+.Wave--colorRed {
+  fill: get-color(brand, red);
+}
+
+.Wave--colorOrange {
+  fill: get-color(brand, orange);
+}
+
+.Hand {
+  fill: get-color(brand, yellow);
+}
+
+// --- Interaction
+.Brand:hover {
+  .Wave--colorMask {
+    animation: logo-rainbow-mask get-duration(slow) get-easing() infinite;
+  }
+
+  .Wave--colorPurple {
+    animation: logo-rainbow-purple get-duration(slow) get-easing() infinite;
+  }
+
+  .Wave--colorRed {
+    animation: logo-rainbow-red get-duration(slow) get-easing() infinite;
+  }
+
+  .Wave--colorOrange {
+    animation: logo-rainbow-orange get-duration(slow) get-easing() infinite;
+  }
+
+  .Hand {
+    animation: logo-outline-bounce get-duration(slow) linear infinite;
+  }
+}
+
+.Brand:active {
+  .Wave--colorMask,
+  .Wave--colorPurple,
+  .Wave--colorRed,
+  .Wave--colorOrange,
+  .Hand {
+    animation-duration: get-duration();
+  }
+}

@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  {% include 'components/Head/Head.html' %}
+{% extends 'views/templates/document.html' %}
 
-  <body id="Example">
-    {% include 'components/Hamburger/Hamburger.html' %}
-    {% include 'components/Sidebar/Sidebar.html' %}
+{% block PageId %}Home{% endblock %}
 
-    <main role="main">
-      <header class="PageHeader">
-        <h1 class="Heading Heading--1">Draggable</h1>
-      </header>
+{% block head %}
+  {% set PageAttrs = {
+    title: 'Home | '
+  } %}
 
-      <section class="Section">
-        <article class="Example">
-          <p>hello its me, curtis</p>
-        </article>
-      </section>
-    </main>
-  </body>
-</html>
+  {% import 'components/Document/Head.html' as Head %}
+  {{ Head.render(PageAttrs) }}
+{% endblock %}
+
+{% block main %}
+  <header class="PageHeader">
+    <h1 class="Heading Heading--1">Draggable</h1>
+  </header>
+
+  <section class="Section">
+    <article class="Example">
+      <p>hello its me, curtis</p>
+    </article>
+  </section>
+{% endblock %}

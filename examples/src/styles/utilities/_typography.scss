@@ -43,7 +43,7 @@
     height: $weight;
     background-color: currentColor;
     opacity: 0;
-    transition: opacity duration() easing();
+    transition: opacity get-duration() get-easing();
   }
 
   &:hover {
@@ -84,7 +84,7 @@
 .line-break--tablet-up {
   display: none;
 
-  @media screen and (min-width: breakpoint(mobile, wide)) {
+  @media screen and (min-width: get-breakpoint(mobile, wide)) {
     display: block;
   }
 }

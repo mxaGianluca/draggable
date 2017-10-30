@@ -11,29 +11,29 @@
 ///
 /// Standard variations
 .Heading--size1 {
-  margin-bottom: spacing(tight);
-  font-size: type-scale(h1);
+  margin-bottom: get-spacing(tight);
+  font-size: get-type-scale(h1);
   font-weight: 700;
 
-  @media screen and (min-width: breakpoint(tablet)) {
-    margin-bottom: spacing();
-    font-size: type-scale(h1, tablet);
+  @media screen and (min-width: get-breakpoint(tablet)) {
+    margin-bottom: get-spacing();
+    font-size: get-type-scale(h1, tablet);
   }
 
-  @media screen and (min-width: breakpoint(tablet, wide)) {
-    margin-bottom: spacing(looser);
+  @media screen and (min-width: get-breakpoint(tablet, wide)) {
+    margin-bottom: get-spacing(looser);
   }
 }
 
 ///
 /// Subheading
 .Subheading {
-  margin-bottom: spacing(loose);
-  font-size: type-scale(subheading);
+  margin-bottom: get-spacing(loose);
+  font-size: get-type-scale(subheading);
   color: white;
 }
 
 .Subheading--typeMono {
-  font-family: font-stack(monospace);
+  font-family: get-font-stack(monospace);
   text-transform: uppercase;
 }

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% block head %}{% endblock %}
+
+  <body id="Page{% block PageId %}{% endblock %}">
+    {% include 'components/Hamburger/Hamburger.html' %}
+    {% include 'components/Sidebar/Sidebar.html' %}
+
+    <main role="main">
+      {% block main %}{% endblock %}
+    </main>
+  </body>
+</html>
